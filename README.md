@@ -1,4 +1,4 @@
-# animeganja
+# animeganja - Anime Streaming Website
 A basic streaming platform build with the Django 2.2.7
 
 You can run the project by cloning or downloading the ZIP. And follow the below Steps.
