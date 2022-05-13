@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <title>AnimeGanja</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"> 
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="{% static 'new_static/css/materialize.min.css' %}"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="{% static 'new_static/css/materialize.css' %}">
+  	
+<link type="text/css" rel="stylesheet" href="{% static 'new_static/css/style.css' %}">
+
+
+  <link rel="shortcut icon" type="image/ico" href="{% static 'new_static/img/logo.ico' %}"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body class=" purple lighten-3">
+
+<div>
+  <nav class=" purple darken-3">  
+    
+    <div class="nav-wrapper">
+  
+      <div class="z-depth-5">
+
+      <a href="{% url 'homepage' %}" class="brand-logo center">
+        <img class="left-brand-logo" src="https://img.icons8.com/color/48/000000/pikachu-pokemon.png"></a>
+      </div>
+
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li><a href="{% url 'all_animes' %}">All Animes</a></li>
+        <li><a href="{% url 'movies' %}">Anime Movies</a></li>
+      </ul>
+
+    
+    </div>
+    
+  </nav>
+</div>
+
+<div class="center hide-on-med-and-up" >
+
+  <nav>
+    <div class="nav-wrapper">
+    	<div class="row">
+
+      <div class="purple darken-3 col s12">
+        <a href="{% url 'homepage' %}" class="small"><b class="pink-text darken-3">Home&nbsp; </b><b class="black-text">|</b>&nbsp;</a>
+        <a href="{% url 'all_animes' %}">
+        <b class="pink-text darken-3">All-Anime&nbsp; </b><b class="black-text">|</b>&nbsp;</a>
+        <a href="{% url 'movies' %}"><b class="pink-text darken-3">Movies&nbsp; </b><b class="black-text">|</b>&nbsp;</a>
+      </div>search_result
+      </div>
+    </div>
+  </nav>
+            
+</div>
+
+{% block content %}{% endblock %}
+  
+
+    <footer class="purple darken-3 page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col m6 s12">
+            <h5 class="white-text">Anime Ganja</h5>
+            <p class="grey-text text-lighten-4">Browse and watch a vast range of Anime series and movies in their full glory</p>
+          </div>
+          <div class="col l4 offset-l2 m6 s12">
+            <a href="{% url 'contact_us' %}"><h6 class="black-text"><b><i class="left pink-text material-icons">call</i><u><b>Contact us here</b></u></h6></a>
+          
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2019 AnimeGanja
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+
+ </body>
+
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="{% static 'new_static/js/materialize.min.js' %}"> </script>
+      <script type="text/javascript" src="{% static 'new_static/js/lang.js' %}"> </script>
+      
+    </body>
+  </html>
+        

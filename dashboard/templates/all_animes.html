@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+	
+<div class="col m6">
+	<div class="center">
+
+{% include 'search_bar.html' %}
+
+	</div>
+</div>
+
+<div class="row">
+	<div class="col m9">
+		<div class="container">
+
+			<div class="center"></div>
+		</div>
+	</div>
+
+	<div class="col m9 s12">
+		<div class="container">
+		<ul class="collection">
+				{% for anime in all_animes %}
+    <li class="collection-item avatar">
+      <img src="{{anime.thumbnail_url}}" alt="" class="<small></small> circle">
+      <span class="title">{{anime.title}}</span>
+      <p>&nbsp;<br>
+         {{anime.genre}}
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons red-text">play_arrow</i></a>
+    </li>
+    <br>
+    	{% endfor %}
+    	
+  </ul>
+            
+		</div>
+	</div>
+</div>
+{% endblock %}

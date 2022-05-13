@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+	{% include 'search_bar.html' %}
+</div> 
+
+<div class="row">
+  <div class="s12 m12">
+<div class="container">
+
+  <h5 class="center"><p> Uh! Oh!! Unable to match any anime, movie or episode's name matching with the search....</p></h5>
+  <p class="center">(If you think me are missing something we should, please let us know using the contact us link below the page)</p>
+  <div class="container center">
+  	
+  
+  <img  src="{% static 'new_static/img/not_found.jpg'%}" alt="not_found">
+</div>
+  <p class="red-text center"> Click to return to the<a class="red-text" href="{% url 'homepage' %}"><b><u> Homepage </u></b></a></p>
+  <br>
+  <h6 class="center"><p>OR, you can try searching again....</p></h6>
+  <br>
+  <br>
+</div>
+</div>
+</div>
+
+{% endblock %}

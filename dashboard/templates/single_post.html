@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+
+ </div>
+
+<div class="row">
+
+  <div class="col m9">
+  	
+
+   <div class="center">
+   	<h4 class="pink-text" >{{object.title}}</h4>
+  <div class="card1">
+  	
+    
+<figure class="card1 card1--dark">
+  <div class="card1__image-container">
+    <img src="{{object.thumbnail_url}}" width="100%" height="250px" alt="Umbreon" class="card1__image">   
+  </div>
+</figure>
+</div>
+</div>
+
+
+
+<div class="col m9"> 
+
+<div class=" purple lighten-4"> 
+<blockquote>
+	<br>
+ 	<p class="justify box">
+ 		<i class="material-icons">format_quote</i>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{object.description}}&nbsp;&nbsp;&nbsp;
+		<i class="material-icons">format_quote</i>
+	</p>
+</blockquote>
+<br>
+</div>
+
+<hr>
+<div class="container">
+
+<p> Start watching all the episodes of {{object.title}}({{object.language}}) in HD now for free- &nbsp;
+</p>
+      
+	{% for episode in object.episodes.all %}
+      <div class="collection ">
+        <a href="{% url 'stream_page' episode.ep_slug %}" class="purple lighten-4 collection-item pink-text">Episode - {{episode.episode_no}}</a>
+
+
+        
+      </div>
+
+      
+    {% endfor %}
+
+</div>
+</div>
+</div>
+
+  <div class="col m3">
+  	 		<div class="container"></div>
+  	 		sdsad
+  	 	</div>
+  	 </div>
+  	
+  
+
+	
+	
+					<!-- /related post -->
+
+
+{% endblock %}

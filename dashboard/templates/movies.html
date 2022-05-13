@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+	
+<div class="col m6">
+	<div class="center">
+
+	{% include 'search_bar.html' %}
+
+	</div>
+</div>
+
+
+	<div class="row">
+
+  <div class="col m9">
+  	
+	{% for movie in movies %}
+   
+   	
+			  <div class="card1">
+			  	
+			   <b> {{movie.title}}</b>
+			<figure class="card1 card1--dark">
+			  <div class="card1__image-container">
+			    <img src="{{movie.thumbnail_url}}" width="100%" height="250px" alt="Umbreon" class="card1__image">   
+			  </div>
+			</figure>
+			</div>
+    {% endfor %}
+    	
+  </ul>
+         <br>
+         <br>   
+         <br>
+         <br>
+         <br>
+           <br>
+         <br>   
+         <br>
+         <br>
+         <br>
+           <br>
+         <br>   
+         <br>
+         <br>
+         <br>	
+		</div>
+	</div>
+</div>
+{% endblock %}
